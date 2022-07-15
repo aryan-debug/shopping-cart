@@ -1,0 +1,26 @@
+.default{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    color:white;
+    text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    > .left > a, > .right > a{
+        text-decoration: none;
+        color:white
+    }
+
+    > .right{
+        display: flex;
+        align-items: baseline;
+        gap:20px;
+    }
+    &.dark{
+        > .left > a, > .right > a{
+            text-decoration: none;
+            color:black;
+        }
+    }
+}
