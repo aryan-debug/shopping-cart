@@ -1,0 +1,40 @@
+@use "variable";
+
+.cart-page{
+    display: flex;
+    flex-direction: column;
+    padding:50px 100px
+}
+
+.cart{
+    margin-top: 100px;
+    font-family: variable.$font;
+}
+
+.cart-list{
+    display: flex;
+    flex-direction: column;
+    margin-top:50px;
+}
+
+.cart-product{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.left-side{
+    display: flex;
+    align-items: center;
+    gap:50px;
+    >img{
+        width:200px
+    }
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap:20px;
+}

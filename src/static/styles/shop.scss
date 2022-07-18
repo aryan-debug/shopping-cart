@@ -36,10 +36,13 @@
 
 #product-card-grid{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(186px, 1fr));
     width: 100%;
     margin-top:100px;
     gap:150px;
+    > a{
+        text-decoration: none;
+    }
 }
 .product-card{
     display: flex;
@@ -86,26 +89,41 @@
 }
 .product-quantity{
     font-family: 'Barlow Condensed', sans-serif;
+    color:black;
     letter-spacing: 2px;
 }
 .image-slider{
     display: flex;
     align-items: center;
-    > button{
-        height:50px;
-        width:40px;
-        background-color: rgb(228, 228, 228);
-        border:none;
-        cursor: pointer;
-        > svg{
-            font-size:1.4em;
-            pointer-events: none;
-        }
+}
+
+.slide-btn{
+    height:50px;
+    width:40px;
+    background-color: rgb(228, 228, 228);
+    border:none;
+    cursor: pointer;
+    > svg{
+        font-size:1.4em;
+        pointer-events: none;
     }
 }
+
 .left-slide-btn{
     border-radius: 0 10px 10px 0;
 }
 .right-slide-btn{
     border-radius: 10px 0 0 10px;
+}
+
+.add-button{
+    width:200px;
+    height:75px;
+    font-size: 1.9em;
+    background-color: variable.$dark-accent-color;
+    border: none;
+    color:white;
+    font-family: variable.$font;
+    font-weight: bold;
+    border-radius: 7px;
 }

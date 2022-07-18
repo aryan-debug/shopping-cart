@@ -6,9 +6,9 @@ export default function QuantityBox({id}){
     const dispatch = useDispatch()
     return (
         <span className="quantity-box">
-            <button className="decrease-btn" onClick = {() => dispatch(decrementQuantity(id))}>-</button>
+            <button className="decrease-btn" onClick = {(e) => {e.stopPropagation(); e.preventDefault(); dispatch(decrementQuantity(id))}}>-</button>
             <h2 className="product-quantity">{useSelector(state => state.products.find(product => product.id === id)).quantity}</h2>
-            <button className = "increase-btn" onClick={() => dispatch(incrementQuantity(id))}>+</button>
+            <button className = "increase-btn" onClick={(e) => {e.stopPropagation(); e.preventDefault(); dispatch(incrementQuantity(id))}}>+</button>
         </span>
     )
 }
