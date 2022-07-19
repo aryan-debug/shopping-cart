@@ -19,7 +19,7 @@ function Shop(){
 
         <div id = "product-card-grid">
             {products.map(product => {
-                return <ProductCard key = {product.id} product_id = {product.id} images = {product.images}/>
+                return <ProductCard key = {product.id} name = {product.name} product_id = {product.id} images = {product.images}/>
             })}
         </div>
     </div>)

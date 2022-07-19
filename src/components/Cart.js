@@ -16,7 +16,7 @@ export function Cart(){
                         <div>
                             <div key = {product.id} className = "cart-product">
                                 <div className="left-side">
-                                    <img src = {product.images[0]} alt = {product.name}></img>
+                                    <img src = {process.env.PUBLIC_URL + product.images[0]} alt = {product.name}></img>
                                     <div className="column">
                                         <h3>Price</h3>
                                         <h2>$ {product.price}</h2>

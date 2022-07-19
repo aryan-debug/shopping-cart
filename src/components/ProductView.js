@@ -36,11 +36,11 @@ export default function ProductView(){
             <div className="images-box">
                 <div className="main-image-box">
                     <button className=" slide-btn left-slide-btn" onClick = {(e) => {e.stopPropagation(); e.preventDefault(); previousImage()}}><FontAwesomeIcon icon={faAngleLeft}/></button>
-                    <img src = {product.images[imageCounter]} alt = "product"></img>
+                    <img src = {process.env.PUBLIC_URL + product.images[imageCounter]} alt = "product"></img>
                     <button className = "slide-btn right-slide-btn" onClick={(e) => {e.stopPropagation(); e.preventDefault(); nextImage()}}><FontAwesomeIcon icon = {faAngleRight}/></button>
                 </div>
                 <div className="product-images">
-                    {product.images.map((image, index) => <img className={index === imageCounter ? "active": ""} onClick = {handleImageClick} key = {image} src = {image} alt = "product"></img>)}
+                    {product.images.map((image, index) => <img className={index === imageCounter ? "active": ""} onClick = {handleImageClick} key = {image} src = {process.env.PUBLIC_URL + image} alt = "product"></img>)}
                 </div>
             </div>
             <div className="product-info">
