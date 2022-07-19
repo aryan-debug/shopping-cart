@@ -126,4 +126,8 @@
     font-family: variable.$font;
     font-weight: bold;
     border-radius: 7px;
+    transition: transform 300ms ease-in;
+    &:hover{
+        transform: scale(1.1);
+    }
 }
